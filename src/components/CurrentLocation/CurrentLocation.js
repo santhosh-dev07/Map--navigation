@@ -24,6 +24,8 @@ const CurrentLocation = () => {
             });
         }
 
+
+        //step1: delay of 2 seconds pass the value of  lat and long
         useEffect(() => {
            if(!("geolocation" in navigator)){
                onError({
@@ -34,7 +36,8 @@ const CurrentLocation = () => {
            navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }, [])
 
-    return location;
+      
+    return location ;
 }
 
 export default CurrentLocation;
